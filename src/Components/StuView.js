@@ -1,8 +1,8 @@
 /*
  * @Author: Kyle Xu
- * @Date: 2020-10-27 21:43:21
+ * @Date: 2020-10-27 23:27:55
  * @LastEditors: Kyle Xu
- * @LastEditTime: 2020-10-27 23:31:14
+ * @LastEditTime: 2020-10-27 23:31:33
  * @Blog: http://kylexu.cn
  * @Github: https://github.com/xxxxxthhh
  * @Mail: kyle_x@foxmail.com
@@ -10,12 +10,11 @@
  */
 import React, { Component } from 'react';
 
-class GroupView extends Component {
+class StuView extends Component {
   constructor(props) {
     super(props);
     this.state = {
       students: null,
-      //   currentStu: 1,
     };
   }
 
@@ -36,7 +35,7 @@ class GroupView extends Component {
       .then((data) => this.setState({ students: data }));
 
     // console.log(111);
-    console.log(this.state.students);
+    // console.log(this.state.students);
     // if (!this.state.students) {
     //   this.setState({ currentStu: 0 });
     // }
@@ -44,16 +43,18 @@ class GroupView extends Component {
 
   render() {
     return (
-      <div className="groupList">
-        <div>1 组</div>
-        <div>2 组</div>
-        <div>3 组</div>
-        <div>4 组</div>
-        <div>5 组</div>
-        <div>6 组</div>
+      <div className="stuList">
+        <div>
+          {this.state.students?.map((student) => (
+            <span className="student" key={student.stuId}>
+              {student.stuId}
+              {student.stuName}
+            </span>
+          ))}
+        </div>
       </div>
     );
   }
 }
 
-export default GroupView;
+export default StuView;
