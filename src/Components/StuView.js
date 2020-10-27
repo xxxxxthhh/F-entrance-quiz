@@ -2,7 +2,7 @@
  * @Author: Kyle Xu
  * @Date: 2020-10-27 23:27:55
  * @LastEditors: Kyle Xu
- * @LastEditTime: 2020-10-27 23:31:33
+ * @LastEditTime: 2020-10-28 00:00:15
  * @Blog: http://kylexu.cn
  * @Github: https://github.com/xxxxxthhh
  * @Mail: kyle_x@foxmail.com
@@ -33,12 +33,6 @@ class StuView extends Component {
     fetch(url, params)
       .then((res) => res.json())
       .then((data) => this.setState({ students: data }));
-
-    // console.log(111);
-    // console.log(this.state.students);
-    // if (!this.state.students) {
-    //   this.setState({ currentStu: 0 });
-    // }
   };
 
   render() {
