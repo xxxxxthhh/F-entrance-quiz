@@ -18,6 +18,7 @@ class App extends Component {
   render() {
     return (
       <div data-testid="app" className="App">
+        {/* TODO GTB-知识点: 组件划分不太合理，分组学员这个Header按照业务划分，应该属于分组列表，建议放在分组列表组件内 */}
         <Navigator />
         <GroupView />
         <StuView />
@@ -27,3 +28,4 @@ class App extends Component {
 }
 
 export default App;
+// TODO GTB-综合: * 完成度低于三分二

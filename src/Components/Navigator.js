@@ -12,6 +12,7 @@ import React, { Component } from 'react';
 
 class Navigator extends Component {
   handleClick = () => {
+    // TODO GTB-综合: * 分组为什么去拿学生列表？
     const url = 'http://localhost:8080/students';
     const params = {
       method: 'GET',
@@ -24,10 +25,13 @@ class Navigator extends Component {
 
   render() {
     return (
+      // TODO GTB-知识点: - 建议使用<header>语义化标签
       <div className="navigator">
         <div>
+          {/* TODO GTB-知识点: - 建议使用h*标签 */}
           <span>分组列表</span>
         </div>
+        {/* TODO GTB-知识点: - 多余的html嵌套 */}
         <div>
           <button type="button" onClick={this.handleClick}>
             分组学员

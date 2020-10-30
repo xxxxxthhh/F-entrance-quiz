@@ -23,6 +23,7 @@ class StuView extends Component {
   }
 
   getStuList = () => {
+    // TODO GTB-工程实践: * 建议把数据请求提取到单独的service
     const url = 'http://localhost:8080/students';
     const params = {
       method: 'GET',
@@ -40,6 +41,7 @@ class StuView extends Component {
       <div className="stuList">
         <div>
           {this.state.students?.map((student) => (
+            // TODO GTB-知识点: * 这块在group 里面也会用到，可以提取成公共组件
             <span className="student" key={student.stuId}>
               {student.stuId}
               {student.stuName}
